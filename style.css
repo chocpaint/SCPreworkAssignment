@@ -1,0 +1,190 @@
+/* STYLESHEET */
+/*  */
+
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@600;700&display=swap');
+
+/* STYLE VARS */
+:root {
+    --sitefont: "Inter", system-ui, sans-serif;;
+    --titlefont: 'Maven Pro', sans-serif;
+    --pagebg: rgb(80, 80, 80);
+    --pagefg: white;
+    --contentbg: #252525;
+}
+
+
+/* HTML ELEMENT STYLE */
+body { /* global page preset styles */
+    font-family: var(--sitefont); 
+    background: var(--pagebg);
+    color: var(--pagefg)
+}
+
+h1 { /* header1 style */
+    font-size: 5em; 
+    margin: 0.5em auto;
+}
+
+h2 { /* header2 style */
+    font-size: 2em; 
+}
+
+h1, h2 { /* headers align text center */
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+
+/* NAV BAR/TITLE STYLE */
+.nav {
+    font-family: var(--titlefont); 
+}
+
+ul.nav-bar { /* nav bar styling */
+    list-style-type: none; /* disable default */
+    margin: 0;
+    padding: 0;
+    background-color: var(--contentbg);
+    overflow: hidden;
+    text-align: center;
+    width: 100%; /* navbar edge to edge */
+}
+
+li.nav-item { /* space nav items and center */
+    display: inline-block;
+    margin: 0 12px;  
+}
+
+li.nav-item a { /* nav 'buttons' styling */
+    display: block;
+    color: white;
+    height: 100%;
+    text-align: center;
+    padding: 1vh 6vh;
+    text-decoration: none;
+}
+
+li.nav-item a:hover { /* nav buttons hover effect */
+    background-color: #ddd;
+    color: black;
+}
+
+.search-container { /* search container div */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+.search-container input { /* search input style */
+    display: block;
+    background-color: #4e4e4e;
+    color: white;
+    font-size: 1em;
+    border: none;
+    text-align: center;
+    padding: 1vh 0;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.search-container input::placeholder { /* search box placeholder text style */
+    font-size: 1.25em;
+    color: rgb(120, 120, 120);
+}
+
+.search-container a {
+    background-color: #4e4e4e;
+    width: 8%;
+    background-color: var(--contentbg);
+    color: white;
+}
+
+.nav-bar-title { /* title name above nav bar and styling */
+    background: linear-gradient(to top, rgb(180, 30, 30), rgb(160, 10, 10), rgb(90, 0, 0), rgb(70, 0, 0));
+    padding: 1vh;
+    margin-bottom: 0vh;
+    text-align: center;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.nav-bar-title img { /* nav bar title image style */
+    max-width: 100px;
+    vertical-align: middle; /* vertically align */
+    margin-right: 20px; /* space image from title text */
+}
+
+.title-text { /* title text style centered */
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle; /* vertically align text with image */
+}
+
+
+/* PAGE STYLE */
+.large-image { /* large image style */
+    display: block;
+    margin: 0 auto;
+    max-width: 33vw;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgb(128, 128, 128);
+}
+
+.text-container { /* text style */
+    max-width: 60%;
+    margin: 10px auto;
+    padding: 8px 7vw;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgb(128, 128, 128);
+}
+
+.scp h3 { /* h3 specific to scp div style */
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.scp div { /* all scp divs style */
+    background: linear-gradient(var(--contentbg),var(--contentbg)) padding-box,
+                linear-gradient(to top, rgb(180, 0, 20), var(--contentbg)) border-box; /* red gradient fade to div bg upwards */
+    border-radius: 2vw;
+    border: 12px solid transparent;
+    color: white;
+  }
+
+.scp-banner { /*  */
+    display: flex;
+    justify-content: space-between; /* Evenly space elements */
+    align-items: center;        /* Align items vertically in the center */
+    width: 100%;                /* Full width */
+  }
+
+
+/* responsiveness for smaller screens */
+@media (max-width: 950px) {
+    h1 { /* header1 style */
+        font-size: 2em; 
+        margin: 0.5em auto;
+    }
+    ul.nav-bar { /* nav bar styling */
+        display: flex;
+        flex-direction: column;   
+    }
+    .text-container { /* text style */
+        max-width: 90%;
+        margin: 10px auto;
+        padding: 2vw;
+        
+    }
+    .scp-banner { /*  */
+        flex-direction: column;    
+    }
+    .large-image { /* large image style */
+        max-width: 80%;
+        height: auto;
+        margin: auto;
+    }
+}
+
+/*  */
